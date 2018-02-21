@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Hearn.Dartboard</title>
+
+    <script src="https://code.createjs.com/1.0.0/easeljs.min.js"></script>
+    <script src="HearnDartboard.js"></script>
+
+</head>
+<body>
+
+    <span id="score">Click a segment</span>
+    <br/>
+
+    <canvas id="canvas" width="600" height="600"></canvas>
+
+    <script>
+        createDartboard("canvas", { 
+            wire: "silver", 
+            wireWidth: 1 ,
+            fontFamily: "Arial",
+            clickHandler: function(score) {
+                document.getElementById("score").innerText = "Last score = " + score;
+            }
+        });
+    </script>
+
+</body>
+</html>
